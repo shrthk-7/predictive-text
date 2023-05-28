@@ -1,3 +1,5 @@
+import dictionary from "./dictionary.json";
+
 class TrieNode {
   constructor(value = "") {
     this.value = value;
@@ -51,10 +53,9 @@ class Trie {
 }
 
 const trie = new Trie();
-trie.insert("hello");
-trie.insert("world");
-trie.insert("height");
-trie.insert("waddle");
 
-console.log(trie.view());
-console.log(trie.getWordsWithPrefix("he"));
+for (const word of dictionary) {
+  trie.insert(word);
+}
+
+export default trie;
