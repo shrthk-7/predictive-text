@@ -1,4 +1,4 @@
-import dictionary from "./dictionary.json";
+import dictionary from "./dictionary.json" assert { type: "json" };
 
 class TrieNode {
   constructor(value = "") {
