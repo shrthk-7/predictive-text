@@ -10,5 +10,8 @@ inputEl.addEventListener("input", (e) => {
     return;
   }
   const possibleWords = trie.getWordsWithPrefix(e.target.value);
-  outputEl.innerText = possibleWords.length ? possibleWords[0] : e.target.value;
+  outputEl.innerText = "";
+  for (const word of possibleWords.slice(0, 10)) {
+    outputEl.innerText += `\n${word}`;
+  }
 });

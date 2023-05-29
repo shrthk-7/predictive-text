@@ -4,7 +4,7 @@
   font-weight: 400;
   font-size: 2rem;
 
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(255, 255, 255, 0.87) !important;
   background-color: #242424;
 
   font-synthesis: none;
@@ -14,13 +14,11 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  border: none;
+  outline: none !important;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 body {
@@ -43,59 +41,40 @@ h1 {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  box-shadow: 8px 8px 0 darkorange;
+  margin: 1rem;
+  border: 2px solid darkorange;
+  background-color: #242424;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  color: whitesmoke;
+  transform: translate(-4px, -4px);
+  transition: all 0.04s linear;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button:hover,
+button:focus {
+  transform: none;
+  box-shadow: 0px 0px 0 whitesmoke;
 }
 
 .text-input {
+  box-shadow: 8px 8px 0 whitesmoke;
+  border: 2px solid whitesmoke;
   background-color: darkorange;
   /* height: 2rem; */
   width: 70%;
   padding: 0.25rem 0.5rem;
   font-size: 1.5rem;
-}
-.text-input:active,
-.text-input:focus {
-  border: none !important;
+  transform: translate(-4px, -4px);
+  transition: all 0.04s linear;
 }
 
-.text-input-label {
-  margin: 1rem;
-  font-size: 1.5rem;
+.text-input:active,
+.text-input:focus {
+  transform: none;
+  box-shadow: 0px 0px 0 darkorange;
 }
