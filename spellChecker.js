@@ -2,6 +2,17 @@ import trie from "./trie.js";
 
 const MAX_EDIT_DISTANCE = 2;
 
+/**
+ * Takes a single string as an input and
+ * returns all string [in the dictionary] that
+ * are within a fixed edit distance [set to 2]
+ *
+ * See https://en.wikipedia.org/wiki/Levenshtein_distance for more information
+ *
+ * @param 	{string} 				word
+ * @returns {string[]}
+ */
+
 const SpellCheck = (word = "") => {
   const visited = new Set();
 
