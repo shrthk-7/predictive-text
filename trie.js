@@ -54,8 +54,18 @@ class Trie {
 
 const trie = new Trie();
 
-for (const word of dictionary) {
-  trie.insert(word);
-}
+const loadingWords = () => {
+  return new Promise((resolve, reject) => {
+    try {
+      for (const word of dictionary) {
+        trie.insert(word);
+      }
+      resolve("done");
+    } catch (error) {
+      reject(error);
+    }
+  });
+};
 
 export default trie;
+export { loadingWords };
